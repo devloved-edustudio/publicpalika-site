@@ -9,7 +9,6 @@ sites/*/private/
 *.log
 /tmp/
 node_modules/
-vendor/
 
 # Ignore IDE/editor configs
 .vscode/
