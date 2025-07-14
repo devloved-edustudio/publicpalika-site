@@ -1,10 +1,17 @@
-/web/sites/default/files
-/web/sites/default/private
-/web/sites/*/settings.php
-/vendor
-/node_modules
-/.idea
-/.vscode
-/.DS_Store
-composer.lock
+# Ignore server-specific settings
+sites/*/settings.php
+sites/*/services.yml
+sites/*/files/
+sites/*/private/
+.env
+
+# Ignore logs and temporary files
 *.log
+/tmp/
+node_modules/
+vendor/
+
+# Ignore IDE/editor configs
+.vscode/
+.idea/
+.DS_Store
