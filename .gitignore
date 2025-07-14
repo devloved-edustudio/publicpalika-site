@@ -1,0 +1,10 @@
+/web/sites/default/files
+/web/sites/default/private
+/web/sites/*/settings.php
+/vendor
+/node_modules
+/.idea
+/.vscode
+/.DS_Store
+composer.lock
+*.log
