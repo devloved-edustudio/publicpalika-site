@@ -3,7 +3,7 @@
         'name' => 'drupal/legacy-project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'f88455c178f50ba79635c82e89edf179c980c40e',
+        'reference' => '9b8a24f6a0df5787ae59f46fb7b7974f39590c96',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -47,9 +47,9 @@
             'dev_requirement' => false,
         ),
         'consolidation/annotated-command' => array(
-            'pretty_version' => '4.10.1',
-            'version' => '4.10.1.0',
-            'reference' => '362310b13ececa9f6f0a4a880811fa08fecc348b',
+            'pretty_version' => '4.10.2',
+            'version' => '4.10.2.0',
+            'reference' => 'e550ea4f177f199e0e9451168342bf3f321d92b0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../consolidation/annotated-command',
             'aliases' => array(),
@@ -172,6 +172,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/adminimal_theme' => array(
+            'pretty_version' => '1.7.0',
+            'version' => '1.7.0.0',
+            'reference' => '8.x-1.7',
+            'type' => 'drupal-theme',
+            'install_path' => __DIR__ . '/../../themes/contrib/adminimal_theme',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/amp' => array(
             'pretty_version' => '3.9.0',
             'version' => '3.9.0.0',
@@ -196,6 +205,15 @@
             'reference' => '3.0.13',
             'type' => 'drupal-module',
             'install_path' => __DIR__ . '/../../modules/contrib/blazy',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'drupal/bootstrap_barrio' => array(
+            'pretty_version' => '5.5.20',
+            'version' => '5.5.20.0',
+            'reference' => '5.5.20',
+            'type' => 'drupal-theme',
+            'install_path' => __DIR__ . '/../../themes/contrib/bootstrap_barrio',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -555,7 +573,7 @@
         'drupal/legacy-project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'f88455c178f50ba79635c82e89edf179c980c40e',
+            'reference' => '9b8a24f6a0df5787ae59f46fb7b7974f39590c96',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -621,6 +639,15 @@
             'reference' => '3.0.3',
             'type' => 'drupal-module',
             'install_path' => __DIR__ . '/../../modules/contrib/schema_metatag',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'drupal/seven' => array(
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'reference' => '1.0.0',
+            'type' => 'drupal-theme',
+            'install_path' => __DIR__ . '/../../themes/contrib/seven',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -923,8 +950,8 @@
         'psr/container-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '^1.0',
-                1 => '1.1|2.0',
+                0 => '1.1|2.0',
+                1 => '^1.0',
             ),
         ),
         'psr/event-dispatcher' => array(
@@ -1344,6 +1371,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'twbs/bootstrap' => array(
+            'pretty_version' => 'v5.3.7',
+            'version' => '5.3.7.0',
+            'reference' => 'e0032ae6a5a628a51a8552091816cec09b6434df',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../twbs/bootstrap',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'twig/twig' => array(
             'pretty_version' => 'v3.20.0',
             'version' => '3.20.0.0',
@@ -1352,6 +1388,12 @@
             'install_path' => __DIR__ . '/../twig/twig',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'twitter/bootstrap' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v5.3.7',
+            ),
         ),
     ),
 );
