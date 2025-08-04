@@ -1,9 +1,11 @@
 # Ignore server-specific settings
+echo "sites/default/settings.php" >> .gitignore
 sites/*/settings.php
 sites/*/services.yml
 sites/*/files/
 sites/*/private/
 .env
+
 
 # Ignore logs and temporary files
 *.log
@@ -15,4 +17,7 @@ node_modules/
 .idea/
 .DS_Store
 
-echo "sites/default/settings.php" >> .gitignore
+echo "sites/default/settings.php" >> .gitignoresites/default/settings.php
+dbtest.php
+phpinfo.php
+sites/default/files/

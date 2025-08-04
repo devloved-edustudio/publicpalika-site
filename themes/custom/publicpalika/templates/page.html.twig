@@ -1,0 +1,126 @@
+{% set sidebar_first_exists = page.sidebar_first|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
+{% set sidebar_second_exists = page.sidebar_second|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
+
+<header class="region-header">
+  {{ page.header }}
+  <div class="slogan"><strong>"मैं"</strong> पब्लिक हूँ।</div>
+  {{ page.header_form }}
+</header>
+
+<section class="region-primary-menu d-flex justify-content-between align-items-center px-3 py-2">
+
+  <div class="tagline text-white">
+      राष्ट्र से राष्ट्रपति तक... <strong>“हम”</strong> सब की पालिका...
+    </div>
+    <div class="d-flex gap-3">
+  
+    <!-- Home Icon -->
+    <div class="align-items-center float-right">
+      <a href="/" title="Home" class="icon-btn">
+        <i class="fas fa-home"></i>
+      </a>
+      <!-- User Icon -->
+
+      <a href="/user" class="icon-btn" title="User">
+        <i class="fas fa-user"></i>
+      </a>
+
+      <!-- Menu Icon (Offcanvas) -->
+      <button class="icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainMenu" aria-controls="mainMenu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Search Collapse -->
+<div class="collapse bg-white p-3" id="searchCollapse">
+  {{ page.search }}
+</div>
+
+<!-- Offcanvas Menu -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mainMenu" aria-labelledby="mainMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="mainMenuLabel">Main Navigation</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    {{ page.primary_menu }}
+  </div>
+</div>
+
+{% block content %}
+  <div id="main" class="{{ container }}">
+  {# 🔶 Highlighted Region: Shows Hero Section like Manifesto #}
+    {% if page.highlighted %}
+      <div class="highlighted">
+        {{ page.highlighted }}
+      </div>
+    {% endif %}
+    {{ page.breadcrumb }}
+    <div class="row row-offcanvas row-offcanvas-left clearfix">
+      <main{{ content_attributes }}>
+        <section class="section">
+          <a href="#main-content" id="main-content" tabindex="-1"></a>
+          {{ page.content }}
+        </section>
+      </main>
+      {% if sidebar_first_exists %}
+        <div{{ sidebar_first_attributes }}>
+          <aside class="section" role="complementary">
+            {{ page.sidebar_first }}
+          </aside>
+        </div>
+      {% endif %}
+      {% if sidebar_second_exists %}
+        <div{{ sidebar_second_attributes }}>
+          <aside class="section" role="complementary">
+            {{ page.sidebar_second }}
+          </aside>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block featured_bottom %}
+  <div class="featured-bottom">
+    <div class="container">
+      <div class="row">
+        {% if page.featured_bottom_first %}
+          <div class="col-md-4">
+            {{ page.featured_bottom_first }}
+          </div>
+        {% endif %}
+        {% if page.featured_bottom_second %}
+          <div class="col-md-4">
+            {{ page.featured_bottom_second }}
+          </div>
+        {% endif %}
+        {% if page.featured_bottom_third %}
+          <div class="col-md-4">
+            {{ page.featured_bottom_third }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  <footer class="footer w-100" style="background-color:#2B2C30;">
+    {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+      <div class="site-footer__top clearfix">
+        {{ page.footer_first }}
+        {{ page.footer_second }}
+        {{ page.footer_third }}
+        {{ page.footer_fourth }}
+      </div>
+    {% endif %}
+    {% if page.footer_fifth %}
+      <div class="site-footer__bottom">
+        {{ page.footer_fifth }}
+      </div>
+    {% endif %}
+  </footer>
+{% endblock %}

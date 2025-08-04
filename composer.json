@@ -125,7 +125,7 @@
         }
     },
     "require-dev": {
-        "drupal/fivestar": "dev-3.0.x",
-        "drupal/votingapi": "dev-4.0.x"
+        "drupal/fivestar": "1.x-dev",
+        "drupal/votingapi": "^3.0@beta"
     }
 }

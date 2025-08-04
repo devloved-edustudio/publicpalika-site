@@ -2423,25 +2423,25 @@
         },
         {
             "name": "drupal/fivestar",
-            "version": "dev-3.0.x",
-            "version_normalized": "dev-3.0.x",
+            "version": "dev-1.x",
+            "version_normalized": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/fivestar.git",
-                "reference": "65cf6fa0218a85f936a543db5c7974319c0773e4"
+                "reference": "3ff6227564bb4dea864dc130d553a46ee0e1c896"
             },
             "require": {
-                "drupal/core": "^10.3 || ^11",
-                "drupal/votingapi": "^4.0"
+                "drupal/core": "^9.2 || ^10",
+                "drupal/votingapi": "^3.0"
             },
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-3.0.x": "3.0.x-dev"
+                    "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "3.0.x-dev",
-                    "datestamp": "1736754401",
+                    "version": "8.x-1.0-alpha5+7-dev",
+                    "datestamp": "1726291857",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -3875,34 +3875,42 @@
         },
         {
             "name": "drupal/votingapi",
-            "version": "dev-4.0.x",
-            "version_normalized": "dev-4.0.x",
+            "version": "3.0.0-beta5",
+            "version_normalized": "3.0.0.0-beta5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/votingapi.git",
-                "reference": "010514d0b35e4790faef182a466a0acd82016d22"
+                "reference": "8.x-3.0-beta5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/votingapi-8.x-3.0-beta5.zip",
+                "reference": "8.x-3.0-beta5",
+                "shasum": "28e072167175c6617f15f21c3bba89900f3d0545"
             },
             "require": {
-                "drupal/core": "^10.3 || ^11"
+                "drupal/core": "^9.2 || ^10"
             },
             "require-dev": {
                 "drupal/token": "^1.5"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-4.0.x": "4.0.x-dev"
-                },
                 "drupal": {
-                    "version": "4.0.x-dev",
-                    "datestamp": "1741652645",
+                    "version": "8.x-3.0-beta5",
+                    "datestamp": "1724557647",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": ">=9"
                     }
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0-or-later"

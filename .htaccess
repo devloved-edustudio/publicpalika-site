@@ -1,3 +1,11 @@
+<IfModule mod_php8.c>
+    php_flag opcache.enable On
+    php_value opcache.memory_consumption 128
+    php_value opcache.interned_strings_buffer 8
+    php_value opcache.max_accelerated_files 4000
+    php_value opcache.revalidate_freq 60
+    php_flag opcache.fast_shutdown 1
+</IfModule>
 #
 # Apache/PHP/Drupal settings:
 #

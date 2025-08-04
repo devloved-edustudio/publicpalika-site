@@ -3,7 +3,7 @@
         'name' => 'drupal/legacy-project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'f88455c178f50ba79635c82e89edf179c980c40e',
+        'reference' => '9b8a24f6a0df5787ae59f46fb7b7974f39590c96',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -452,13 +452,13 @@
             'dev_requirement' => false,
         ),
         'drupal/fivestar' => array(
-            'pretty_version' => 'dev-3.0.x',
-            'version' => 'dev-3.0.x',
-            'reference' => '65cf6fa0218a85f936a543db5c7974319c0773e4',
+            'pretty_version' => 'dev-1.x',
+            'version' => 'dev-1.x',
+            'reference' => '3ff6227564bb4dea864dc130d553a46ee0e1c896',
             'type' => 'drupal-module',
             'install_path' => __DIR__ . '/../../modules/contrib/fivestar',
             'aliases' => array(
-                0 => '3.0.x-dev',
+                0 => '1.x-dev',
             ),
             'dev_requirement' => true,
         ),
@@ -555,7 +555,7 @@
         'drupal/legacy-project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'f88455c178f50ba79635c82e89edf179c980c40e',
+            'reference' => '9b8a24f6a0df5787ae59f46fb7b7974f39590c96',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -661,14 +661,12 @@
             'dev_requirement' => false,
         ),
         'drupal/votingapi' => array(
-            'pretty_version' => 'dev-4.0.x',
-            'version' => 'dev-4.0.x',
-            'reference' => '010514d0b35e4790faef182a466a0acd82016d22',
+            'pretty_version' => '3.0.0-beta5',
+            'version' => '3.0.0.0-beta5',
+            'reference' => '8.x-3.0-beta5',
             'type' => 'drupal-module',
             'install_path' => __DIR__ . '/../../modules/contrib/votingapi',
-            'aliases' => array(
-                0 => '4.0.x-dev',
-            ),
+            'aliases' => array(),
             'dev_requirement' => true,
         ),
         'drupal/webform' => array(
@@ -923,8 +921,8 @@
         'psr/container-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '^1.0',
-                1 => '1.1|2.0',
+                0 => '1.1|2.0',
+                1 => '^1.0',
             ),
         ),
         'psr/event-dispatcher' => array(
